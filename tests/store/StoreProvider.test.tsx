@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { useAppDispatch, useAppSelector } from "@/hooks";
 import { renderWithProviders } from "../test-utils";
 import { increment, selectCount } from "@/store";
-import { StoreProvider } from "@/app/components/Providers";
+import { StoreProvider } from "@/components/Providers";
 
 // How a component talks to the store: select to read, dispatch to write.
 function Counter() {
