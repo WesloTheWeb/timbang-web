@@ -22,3 +22,4 @@ This is a learning project. The human writes the code.
 - Never commit or push; the human does that.
 - Never read or print .env or .env.local.
 - Never call paid external APIs (LLMs, Kroger) or add keys for them.
+- Any relevant or key functions that has a large blast radius or effect, write a summary or add notes as comments. Do not wall of text it but just enough to provide context.

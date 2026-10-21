@@ -1,0 +1,42 @@
+// Global SCSS variables.
+// Injected into every .scss file by next.config.ts (sassOptions.additionalData),
+// so use $variables directly; no @use needed.
+// Keep this file to variables only: anything that outputs CSS here would be
+// duplicated into every module.
+//
+// SCSS variables are fixed at build time. Colors that change with the theme
+// (light/dark) are CSS custom properties in globals.scss instead: var(--background).
+
+// Breakpoints (mobile first: @media (min-width: $bp-md) { ... })
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+
+// Spacing (4px scale)
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 0.75rem;
+$space-4: 1rem;
+$space-6: 1.5rem;
+$space-8: 2rem;
+$space-12: 3rem;
+
+// Radius
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 16px;
+
+// Fonts (the CSS variables come from next/font in layout.tsx)
+$font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+$font-mono: var(--font-geist-mono), monospace;
+
+// Theme palettes, applied as CSS custom properties in globals.scss
+$light-background: #ffffff;
+$light-foreground: #171717;
+$dark-background: #0a0a0a;
+$dark-foreground: #ededed;
+
+// Layering
+$z-header: 100;
+$z-modal: 1000;
