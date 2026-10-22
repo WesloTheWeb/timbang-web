@@ -5,7 +5,7 @@
 // duplicated into every module.
 //
 // SCSS variables are fixed at build time. Colors that change with the theme
-// (light/dark) are CSS custom properties in globals.scss instead: var(--background).
+// (light/dark) are CSS custom properties in globals.scss instead: var(--color-bg).
 
 // Breakpoints (mobile first: @media (min-width: $bp-md) { ... })
 $bp-sm: 640px;
@@ -31,11 +31,73 @@ $radius-lg: 16px;
 $font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 $font-mono: var(--font-geist-mono), monospace;
 
-// Theme palettes, applied as CSS custom properties in globals.scss
-$light-background: #ffffff;
-$light-foreground: #171717;
-$dark-background: #0a0a0a;
-$dark-foreground: #ededed;
+// ---------------------------------------------------------------------------
+// Color palettes (tier 1: raw scales)
+//
+// Naming: $<family>-<step>. Steps run 50 (lightest) to 950 (darkest), so a
+// bigger number is always darker, in every family.
+//
+// These are ingredients, not roles. Components never use them directly:
+// they use the semantic roles in globals.scss (var(--color-primary)), which
+// map to these scales differently in light and dark themes.
+//
+// Status colors (success, warning, danger, info) come from the toast palette
+// and get their own families here when it's added.
+// ---------------------------------------------------------------------------
+
+// Neutral: green-tinted grays for backgrounds, borders and secondary text
+$neutral-0: #ffffff;
+$neutral-50: #f4f6ef;
+$neutral-100: #e6ebe0;
+$neutral-200: #dce2d6;
+$neutral-300: #c3cbbf;
+$neutral-400: #9aa79f;
+$neutral-500: #737f77;
+$neutral-600: #56615a;
+$neutral-700: #3a443e;
+$neutral-800: #2c3530;
+$neutral-850: #1f2621;
+$neutral-900: #171d19;
+$neutral-950: #0f1411;
+
+// Leaf: brand primary (solver, main actions)
+$leaf-50: #eef5ef;
+$leaf-100: #e1ede4;
+$leaf-200: #bfd9c7;
+$leaf-300: #8fc0a0;
+$leaf-400: #5fa47c;
+$leaf-500: #3a8a5f;
+$leaf-600: #2a7350;
+$leaf-700: #1e5a3c;
+$leaf-800: #17462f;
+$leaf-900: #173a2a;
+$leaf-950: #14231b;
+
+// Ube: secondary (the user's own data: pantry, sources, formulas)
+$ube-50: #f6f2fb;
+$ube-100: #eee7f7;
+$ube-200: #dacbee;
+$ube-300: #bfa6e0;
+$ube-400: #a283ce;
+$ube-500: #8565b5;
+$ube-600: #6b4e9b;
+$ube-700: #5b3e8c;
+$ube-800: #452f6b;
+$ube-900: #2e2148;
+$ube-950: #1e1730;
+
+// Calamansi: accent (money and cost, used sparingly)
+$calamansi-50: #f7f9e3;
+$calamansi-100: #eef3c4;
+$calamansi-200: #dce68f;
+$calamansi-300: #c9dc5c;
+$calamansi-400: #b4c93a;
+$calamansi-500: #8fa12a;
+$calamansi-600: #717f1f;
+$calamansi-700: #55601a;
+$calamansi-800: #3d4515;
+$calamansi-900: #2a3010;
+$calamansi-950: #1a2410;
 
 // Layering
 $z-header: 100;
