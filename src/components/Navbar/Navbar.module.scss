@@ -1,0 +1,34 @@
+// Placeholder colors; move to --color-* tokens in globals.scss later.
+$nav-bg: #111111;
+$nav-text: #ffffff;
+$nav-hover: #ffb366;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: $z-header;
+  display: flex;
+  justify-content: flex-end; // links on the right
+  align-items: center;
+  padding: $space-4 $space-6;
+  background: $nav-bg;
+}
+
+.navList {
+  display: flex;
+  gap: $space-6;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navLink {
+  color: $nav-text;
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: $nav-hover;
+  }
+}
